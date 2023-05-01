@@ -13,6 +13,7 @@ class Srvices {
       builder: (context) => Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             TextWidget(
               label: "Chosen Model:",

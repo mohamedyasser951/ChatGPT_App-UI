@@ -24,10 +24,12 @@ class _ChatWidgetState extends State<ChatWidget> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
-                
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Image.asset(
-                    widget.index == 0 ? AssetServices.person : AssetServices.chatLogo,
+                    widget.index == 0
+                        ? AssetServices.person
+                        : AssetServices.chatLogo,
                     width: 30,
                     height: 30,
                   ),
@@ -35,6 +37,22 @@ class _ChatWidgetState extends State<ChatWidget> {
                     width: 4,
                   ),
                   Expanded(child: TextWidget(label: widget.msg)),
+                  widget.index == 0
+                      ? Row(
+                          children: [
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.thumb_up_alt_outlined,color: Colors.white,)),
+                            const SizedBox(
+                              width: 4,
+                            ),
+                            IconButton(
+                                onPressed: () {},
+                                icon:
+                                    const Icon(Icons.thumb_down_alt_outlined,color: Colors.white,)),
+                          ],
+                        )
+                      : const SizedBox.shrink()
                 ],
               ),
             ),
