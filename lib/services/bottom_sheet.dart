@@ -19,6 +19,7 @@ class Srvices {
               label: "Chosen Model:",
               fontSize: 16,
             ),
+            SizedBox(width: 10,),
             Flexible(flex: 2, child: ModelsDropDownWidget())
           ],
         ),
